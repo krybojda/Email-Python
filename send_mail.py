@@ -26,6 +26,8 @@ def send_email(to_email, subject, message):
             print("Wiadomość e-mail została wysłana!")
 
             
+
+
     except Exception as e:
         print("Wystąpił błąd podczas wysyłania wiadomości e-mail.")
         print(e)
@@ -44,9 +46,15 @@ tresc_plik = 'tresc.txt'  # ścieżka do pliku z treścią wiadomości
 with open(tresc_plik, 'r', encoding='utf-8') as file:
     message2 = file.read()
 
-#send_email(z_listy, temat, message)  #tresc ze zmiennej, emaile z listy
-#send_email(z_listy, temat, message2) #tresc z pliku, emaile z listy
-#send_email(z_pliku, temat, message)  #tresc ze zmiennej, email z pliku
-send_email(z_pliku, temat, message2) #tresc z pliku, emaile z pliku
 
 
+
+values = range(10)
+for i in values:
+    print(i+1)
+   
+    #send_email(z_listy, temat, message)  #tresc ze zmiennej, emaile z listy
+    #send_email(z_listy, temat, message2) #tresc z pliku, emaile z listy
+    #send_email(z_pliku, temat, message)  #tresc ze zmiennej, email z pliku
+    send_email(z_pliku, temat, message2) #tresc z pliku, emaile z pliku
+    
